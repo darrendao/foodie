@@ -31,7 +31,6 @@ class Ability
 
     if user.role? :super_admin
       can :manage, :all
-      can :assign_roles, User
     else
       # User can update their own account
       can :update, User, :id => user.id

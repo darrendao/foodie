@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   validates :username, :email, uniqueness: true
 
   has_and_belongs_to_many :roles
+  has_many :lenses
 
   def roles_names
     roles.map{|role|role.name}.join(", ") if roles

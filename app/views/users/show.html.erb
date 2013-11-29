@@ -19,7 +19,14 @@
   <b>Last name:</b>
   <%= @user.last_name %>
 </p>
-<% if can? :read_roles, @user %>
+
+<h2>Lenses</h2>
+<%= render @user.lenses %>
+
+<h2>Add a Lens:</h2>
+<%= render "lenses/form" %>
+
+<% if can? :dosomething_roles, @user %>
 <p>
   <b>Roles:</b>
   <%= @user.roles_names %>

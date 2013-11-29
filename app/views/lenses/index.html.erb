@@ -1,0 +1,29 @@
+<h1>Listing lenses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lenses.each do |lens| %>
+      <tr>
+        <td><%= lens.name %></td>
+        <td><%= lens.user_id %></td>
+        <td><%= link_to 'Show', lens %></td>
+        <td><%= link_to 'Edit', edit_lens_path(lens) %></td>
+        <td><%= link_to 'Destroy', lens, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lens', new_lens_path %>

@@ -46,3 +46,5 @@ end
 
 gem "devise", "~> 3.2.2"
 gem "cancan"
+
+gem 'rb-readline'
