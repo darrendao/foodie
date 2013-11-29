@@ -24,5 +24,5 @@ user.roles |= [columnist]
 user.save
 
 multirole_user = User.find_or_create_by_username('multirole1', :email => 'multirole1@example.com', :password => 'password', :password_confirmation => 'password')
-
 multirole_user.roles |= [columnist, establishment_owner]
+
