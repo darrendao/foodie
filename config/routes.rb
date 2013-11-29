@@ -1,5 +1,7 @@
 Foodlens::Application.routes.draw do
 
+  resources :roles
+
   resources :establishments do
     resources :reviews
   end
