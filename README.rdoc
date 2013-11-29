@@ -8,4 +8,5 @@ Requires Ruby 2 and Rails 4
    rails server
    
 Browse to http://localhost:3000
+
 Log in as admin@example.com/password
