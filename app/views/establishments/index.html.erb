@@ -1,0 +1,33 @@
+<h1>Listing establishments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+      <th>Address</th>
+      <th>Telephone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @establishments.each do |establishment| %>
+      <tr>
+        <td><%= establishment.name %></td>
+        <td><%= establishment.website %></td>
+        <td><%= establishment.address %></td>
+        <td><%= establishment.telephone %></td>
+        <td><%= link_to 'Show', establishment %></td>
+        <td><%= link_to 'Edit', edit_establishment_path(establishment) %></td>
+        <td><%= link_to 'Destroy', establishment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Establishment', new_establishment_path %>

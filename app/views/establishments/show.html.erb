@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @establishment.name %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @establishment.website %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @establishment.address %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @establishment.telephone %>
+</p>
+
+<h2>Reviews</h2>
+<%= render @establishment.reviews %>
+
+<h2>Add a review:</h2>
+<%= render "reviews/form" %>
+
+<%= link_to 'Edit', edit_establishment_path(@establishment) %> |
+<%= link_to 'Back', establishments_path %>
